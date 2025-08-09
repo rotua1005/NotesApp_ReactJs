@@ -1,0 +1,258 @@
+/* Import font modern dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #202124;
+  color: white;
+  line-height: 1.6;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+/* Inputs & Textarea */
+input, textarea {
+  padding: 16px;
+  margin: 14px 0;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #8ab4f8;
+  box-shadow: 0 0 8px rgba(138, 180, 248, 0.6);
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Header */
+.note-app__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #333;
+  background-color: #2a2b2f;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.note-app__header h1 {
+  margin: 10px 0;
+  flex: 1;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #8ab4f8, #ffcf67);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Body container */
+.note-app__body {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 18px;
+}
+
+.note-app__body h2 {
+  font-weight: 600;
+  margin: 22px 0 14px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 6px;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+/* Input form */
+.note-input {
+  margin: 0 auto 50px;
+  max-width: 600px;
+}
+
+.note-input__title {
+  font-weight: bold;
+}
+
+.note-input__title__char-limit {
+  font-size: 15px;
+  text-align: right;
+  color: #aaa;
+  margin-bottom: 6px; 
+}
+
+.note-input__body {
+  min-height: 200px;
+  min-width: 600px; 
+}
+
+.note-input button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #8ab4f8;
+  color: #202124;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.note-input button:hover {
+  background-color: #5f92e8;
+  transform: translateY(-1px);
+}
+
+/* Notes List */
+.notes-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.notes-list__empty-message {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Note Card */
+.note-item {
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #2a2b2f;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  transition: all 0.2s ease;
+}
+
+.note-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 16px rgba(0,0,0,0.6);
+}
+
+.note-item__content {
+  padding: 16px;
+  flex: 1;
+}
+
+.note-item__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.note-item__date {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.note-item__body {
+  font-size: 15px;
+  white-space: pre-wrap;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+
+/* Actions */
+.note-item__action {
+  display: flex;
+}
+
+.note-item__delete-button,
+.note-item__archive-button {
+  flex: 1;
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid #333;
+  padding: 12px 0;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.note-item__delete-button {
+  border-right: 1px solid #333;
+  color: #ff5f52;
+}
+
+.note-item__archive-button {
+  color: #fff263;
+}
+
+.note-item__archive-button:hover {
+  background-color: rgba(255, 242, 99, 0.1);
+  color: #c49000;
+}
+
+.note-item__delete-button:hover {
+  background-color: rgba(255, 95, 82, 0.1);
+  color: #b00020;
+}
+
+/* Search */
+.note-search input {
+  min-width: 220px;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (min-width: 500px) {
+  .notes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 800px) {
+  .notes-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .note-search input {
+    min-width: 420px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .notes-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.note-input__title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
