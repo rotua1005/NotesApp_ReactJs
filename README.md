@@ -141,4 +141,4 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi di lingkungan loka
 
 Anda bisa mencoba langsung aplikasi ini melalui tautan demo berikut:
 
-[Tautan Demo Aplikasi Catatan Pribadi](https://nama-aplikasi-catatan.netlify.app/)
+[[Tautan Demo Aplikasi Catatan Pribadi](https://nama-aplikasi-catatan.netlify.app/)](https://notes-app-react-js-dun.vercel.app/)
